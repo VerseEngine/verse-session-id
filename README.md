@@ -7,7 +7,7 @@ Session ID for [@VerseEngine/verse-core](https://github.com/VerseEngine/verse-co
 
 
 ## Usage
-### Signature Validation
+### Signature Verification
 ```rust
 use verse_session_id::*;
 
