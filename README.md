@@ -5,7 +5,9 @@
 [<img alt="MIT" src="https://img.shields.io/github/license/VerseEngine/verse-session-id?style=for-the-badge" height="20">](https://github.com/VerseEngine/verse-session-id/blob/main/LICENSE)
 [<img alt="MIT" src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge" height="20">](https://github.com/VerseEngine/verse-three/pulls)
 
-Session ID for [@VerseEngine/verse-core](https://github.com/VerseEngine/verse-session-id)
+
+ID with signature/verification functions.  
+Used as session ID in [@VerseEngine/verse-core](https://github.com/VerseEngine/verse-session-id).
 
 
 ## Usage
@@ -23,5 +25,24 @@ pub fn verify_string(session_id: &str, signature: &str, data: &str) -> bool {
     };
 
     sid.verify(vec![data.as_bytes()], &ss).is_ok()
+}
+```
+
+### Generate ID
+```rust
+let id_pair = new_session_id_pair()?;
+let session_id = id_pair.get_id();
+// to string
+let s = format!("{}", session_id);
+```
+
+
+### Create a signature
+```rust
+pub fn sign_string(&self, data: &str) -> Result<String> {
+    let id_pair = ...;
+    Ok(id_pair
+        .sign(vec![data.as_bytes()])?
+        .to_string())
 }
 ```
