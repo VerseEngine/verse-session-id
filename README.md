@@ -7,6 +7,7 @@
 
 
 ID with signature/verification functions.  
+ED25519 is used for digital signatures.
 Used as session ID in [@VerseEngine/verse-core](https://github.com/VerseEngine/verse-session-id).
 
 
