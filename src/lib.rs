@@ -6,7 +6,7 @@
 //! [<img alt="MIT" src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge" height="20">](https://github.com/VerseEngine/verse-three/pulls)
 //!
 //! ID with signature/verification functions.  
-//! ED25519 is used for digital signatures.
+//! ED25519 is used for digital signatures.  
 //! Used as session ID in [@VerseEngine/verse-core](https://github.com/VerseEngine/verse-session-id).
 //!
 //! ## Usage
